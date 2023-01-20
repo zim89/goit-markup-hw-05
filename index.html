@@ -18,16 +18,16 @@
 
 <body>
   <!--? HEADER section -->
-  <header class="header-section">
-    <div class="container header-wrap">
+  <header class="header">
+    <div class="header-wrap container">
       <a href="./index.html" class="logo link">
         WEB<span class="header-logo-accent">STUDIO</span>
       </a>
 
-      <nav>
-        <ul class="header-nav">
+      <nav class="header-nav">
+        <ul class="header-nav-list">
           <li class="header-nav-item">
-            <a href="./index.html" class="header-nav-link link active">Studio</a>
+            <a href="./index.html" class="header-nav-link active link">Studio</a>
           </li>
 
           <li class="header-nav-item">
@@ -43,18 +43,12 @@
       <ul class="header-contacts">
         <li class="header-contacts-item">
           <a href="mailto:info@devstudio.com" class="header-contacts-link link">
-            <!-- <svg class="header-contacts-icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-mail" />
-            </svg> -->
             info@devstudio.com
           </a>
         </li>
 
         <li class="header-contacts-item">
           <a href="tel:110001111111" class="header-contacts-link link">
-            <!-- <svg class="header-contacts-icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-mobile" />
-            </svg> -->
             +11 (000) 111-11-11
           </a>
         </li>
@@ -64,20 +58,20 @@
 
   <main>
     <!--? HERO section -->
-    <section class="hero-wrap">
-      <div class="container">
+    <section class="hero mx-auto">
+      <div class="hero-wrap container">
         <h1 class="title-hero mx-auto">Effective Solutions for Your Business</h1>
-        <button type="button" class="btn btn-hero mx-auto">Order Service</button>
+        <button type="button" class="btn btn-hero">Order Service</button>
       </div>
     </section>
 
     <!--? SKILLS section -->
-    <section class="skills-wrap section">
+    <section class="skills section pb-0">
       <div class="container">
         <h2 class="title visually-hidden">Company skills</h2>
 
-        <ul class="skills-list">
-          <li class="skills-list-item">
+        <ul class="skills-list card-set">
+          <li class="skills-list-item card-set-item">
             <div class="skills-list-icon-thumb">
               <svg class="skills-list-icon" width="64" height="64">
                 <use href="./images/icons.svg#icon-antenna" />
@@ -91,7 +85,7 @@
             </p>
           </li>
 
-          <li class="skills-list-item">
+          <li class="skills-list-item card-set-item">
             <div class="skills-list-icon-thumb">
               <svg class="skills-list-icon" width="64" height="64">
                 <use href="./images/icons.svg#icon-clock" />
@@ -104,7 +98,7 @@
             </p>
           </li>
 
-          <li class="skills-list-item">
+          <li class="skills-list-item card-set-item">
             <div class="skills-list-icon-thumb">
               <svg class="skills-list-icon" width="64" height="64">
                 <use href="./images/icons.svg#icon-diagram" />
@@ -117,7 +111,7 @@
             </p>
           </li>
 
-          <li class="skills-list-item">
+          <li class="skills-list-item card-set-item">
             <div class="skills-list-icon-thumb">
               <svg class="skills-list-icon" width="64" height="64">
                 <use href="./images/icons.svg#icon-astronaut" />
@@ -134,28 +128,29 @@
     </section>
 
     <!--? APPLICATION section -->
-    <section class="application-wrap section pt-0">
+    <section class="aplication section pt-0">
       <div class="container">
         <h2 class="title">What are we doing</h2>
 
-        <ul class="application-list">
-          <li class="application-list-item">
+        <ul class="application-list card-set">
+          <li class="application-list-item card-set-item">
             <a href="" class="application-list-link link">
               <img src="./images/img01.jpg" alt="Desktop app" width="360" height="300" />
             </a>
           </li>
 
-          <li class="application-list-item">
+          <li class="application-list-item card-set-item">
             <a href="" class="application-list-link link">
               <img src="./images/img02.jpg" alt="Mobile app" width="360" height="300" />
             </a>
           </li>
 
-          <li class="application-list-item">
+          <li class="application-list-item card-set-item">
             <a href="" class="application-list-link link">
               <img src="./images/img03.jpg" alt="Synchronization between devices" width="360" height="300" />
             </a>
           </li>
+
         </ul>
       </div>
     </section>
@@ -164,14 +159,14 @@
     <section class="team-wrap section">
       <div class="container">
         <h2 class="title">Our Team</h2>
-        <ul class="team-list">
-          <li class="team-list-item">
+        <ul class="team-list card-set">
+          <li class="team-list-item card-set-item">
             <img src="./images/ava01.jpg" alt="Mark Guerrero" width="264" height="260" />
             <div class="team-content-wrap">
               <h3 class="subtitle text-center">Mark Guerrero</h3>
               <p class="text text-center">Product Designer</p>
 
-              <ul class="social-list">
+              <ul class="social-list card-set">
                 <li class="social-list-item">
                   <a class="social-list-link" href="#">
                     <svg class="social-list-icon" width="16" height="16">
@@ -204,12 +199,12 @@
             </div>
           </li>
 
-          <li class="team-list-item">
+          <li class="team-list-item card-set-item">
             <img src="./images/ava02.jpg" alt="Tom Ford" width="264" height="260" />
             <div class="team-content-wrap">
               <h3 class="subtitle text-center">Tom Ford</h3>
               <p class="text text-center">Frontend Developer</p>
-              <ul class="social-list">
+              <ul class="social-list card-set">
                 <li class="social-list-item">
                   <a class="social-list-link" href="#">
                     <svg class="social-list-icon" width="16" height="16">
@@ -242,12 +237,12 @@
             </div>
           </li>
 
-          <li class="team-list-item">
+          <li class="team-list-item card-set-item">
             <img src="./images/ava03.jpg" alt="Camila Garcia" width="264" height="260" />
             <div class="team-content-wrap">
               <h3 class="subtitle text-center">Camila Garcia</h3>
               <p class="text text-center">Marketing</p>
-              <ul class="social-list">
+              <ul class="social-list card-set">
                 <li class="social-list-item">
                   <a class="social-list-link" href="#">
                     <svg class="social-list-icon" width="16" height="16">
@@ -280,12 +275,12 @@
             </div>
           </li>
 
-          <li class="team-list-item">
+          <li class="team-list-item card-set-item">
             <img src="./images/ava04.jpg" alt="Daniel Wilson" width="264" height="260" />
             <div class="team-content-wrap">
               <h3 class="subtitle text-center">Daniel Wilson</h3>
               <p class="text text-center">UI Designer</p>
-              <ul class="social-list">
+              <ul class="social-list card-set">
                 <li class="social-list-item">
                   <a class="social-list-link" href="#">
                     <svg class="social-list-icon" width="16" height="16">
@@ -323,46 +318,46 @@
   </main>
 
   <!--? CUSTOMERS section -->
-  <section class="section customers">
+  <section class="customers section">
     <div class="container">
       <h2 class="title">Customers</h2>
-      <ul class="customers-list">
-        <li class="customers-list-item">
+      <ul class="customers-list card-set">
+        <li class="customers-list-item card-set-item">
           <a class="customers-list-link" href="#">
             <svg class="customers-list-icon" width="104" height="56">
               <use href="./images/icons.svg#icon-logo1" />
             </svg>
           </a>
         </li>
-        <li class="customers-list-item">
+        <li class="customers-list-item card-set-item">
           <a class="customers-list-link" href="#">
             <svg class="customers-list-icon" width="104" height="56">
               <use href="./images/icons.svg#icon-logo2" />
             </svg>
           </a>
         </li>
-        <li class="customers-list-item">
+        <li class="customers-list-item card-set-item">
           <a class="customers-list-link" href="#">
             <svg class="customers-list-icon" width="104" height="56">
               <use href="./images/icons.svg#icon-logo3" />
             </svg>
           </a>
         </li>
-        <li class="customers-list-item">
+        <li class="customers-list-item card-set-item">
           <a class="customers-list-link" href="#">
             <svg class="customers-list-icon" width="104" height="56">
               <use href="./images/icons.svg#icon-logo4" />
             </svg>
           </a>
         </li>
-        <li class="customers-list-item">
+        <li class="customers-list-item card-set-item">
           <a class="customers-list-link" href="#">
             <svg class="customers-list-icon" width="104" height="56">
               <use href="./images/icons.svg#icon-logo5" />
             </svg>
           </a>
         </li>
-        <li class="customers-list-item">
+        <li class="customers-list-item card-set-item">
           <a class="customers-list-link" href="#">
             <svg class="customers-list-icon" width="104" height="56">
               <use href="./images/icons.svg#icon-logo6" />
@@ -374,10 +369,10 @@
   </section>
 
   <!--? FOOTER section -->
-  <footer class="footer-wrap">
-    <div class="container footer-content-wrap">
+  <footer class="footer">
+    <div class="footer-wrap container">
       <div class="footer-logo-side">
-        <a href="./index.html" class="link logo">WEB<span class="footer-accent">STUDIO</span></a>
+        <a href="./index.html" class="logo footer-link link">WEB<span class="footer-accent">STUDIO</span></a>
         <p class="footer-text">
           Increase the flow of customers and sales for your business with digital marketing &
           growth solutions.
@@ -386,30 +381,30 @@
 
       <div class="footer-social-side">
         <p class="footer-social-text">Social media</p>
-        <ul class="footer-social-list">
-          <li class="footer-social-list-item">
+        <ul class="footer-social-list card-set">
+          <li class="footer-social-list-item card-set-item">
             <a class="footer-social-list-link" href="#">
               <svg class="footer-social-list-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-instagram" />
               </svg>
             </a>
           </li>
-          <li class="footer-social-list-item">
+          <li class="footer-social-list-item card-set-item">
             <a class="footer-social-list-link" href="#">
               <svg class="footer-social-list-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-twitter" />
               </svg>
             </a>
           </li>
-          <li class="footer-social-list-item">
+          <li class="footer-social-list-item card-set-item">
             <a class="footer-social-list-link" href="#">
               <svg class="footer-social-list-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-facebook" />
               </svg>
             </a>
           </li>
-          <li class="footer-social-list-item">
-            <a class="footer-social-list-link" href="#">
+          <li class="footer-social-list-item card-set-item">
+            <a class=" footer-social-list-link" href="#">
               <svg class="footer-social-list-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-linkedin" />
               </svg>

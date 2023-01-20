@@ -19,20 +19,20 @@
 
 <body>
   <!--? HEADER section -->
-  <header class="header-section">
+  <header class="header">
     <div class="container header-wrap">
       <a href="./index.html" class="logo link">
         WEB<span class="header-logo-accent">STUDIO</span>
       </a>
 
-      <nav>
-        <ul class="header-nav">
+      <nav class="header-nav">
+        <ul class="header-nav-list">
           <li class="header-nav-item">
-            <a href="./index.html" class="header-nav-link link">Studio</a>
+            <a href="./index.html" class="header-nav-link active link">Studio</a>
           </li>
 
           <li class="header-nav-item">
-            <a href="./portfolio.html" class="header-nav-link link active">Portfolio</a>
+            <a href="./portfolio.html" class="header-nav-link link">Portfolio</a>
           </li>
 
           <li class="header-nav-item">
@@ -44,18 +44,12 @@
       <ul class="header-contacts">
         <li class="header-contacts-item">
           <a href="mailto:info@devstudio.com" class="header-contacts-link link">
-            <!-- <svg class="header-contacts-icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-mail" />
-            </svg> -->
             info@devstudio.com
           </a>
         </li>
 
         <li class="header-contacts-item">
           <a href="tel:110001111111" class="header-contacts-link link">
-            <!-- <svg class="header-contacts-icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-mobile" />
-            </svg> -->
             +11 (000) 111-11-11
           </a>
         </li>
@@ -68,7 +62,7 @@
       <div class="container">
         <h1 class="title visually-hidden">Portfolio</h1>
 
-        <ul class="portfolio-nav">
+        <ul class="portfolio-nav card-set">
           <li class="portfolio-nav-item">
             <button type="button" class="btn btn-portfolio active">All</button>
           </li>
@@ -86,8 +80,8 @@
           </li>
         </ul>
 
-        <ul class="portfolio-list">
-          <li class="portfolio-list-item">
+        <ul class="portfolio-list card-set">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-01.jpg" alt="Banking App Interface Concept" width="360" height="300" />
               <div class="portfolio-content-wrap">
@@ -97,7 +91,7 @@
             </a>
           </li>
 
-          <li class="portfolio-list-item">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-02.jpg" alt="Cashless Payment" width="360" height="300" />
               <div class="portfolio-content-wrap">
@@ -107,7 +101,7 @@
             </a>
           </li>
 
-          <li class="portfolio-list-item">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-03.jpg" alt="Meditaion App" width="360" height="300" />
               <div class="portfolio-content-wrap">
@@ -117,7 +111,7 @@
             </a>
           </li>
 
-          <li class="portfolio-list-item">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-04.jpg" alt="Taxi Service" width="360" height="300" />
 
@@ -128,7 +122,7 @@
             </a>
           </li>
 
-          <li class="portfolio-list-item">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-05.jpg" alt="Screen Illustrations" width="360" height="300" />
               <div class="portfolio-content-wrap">
@@ -138,7 +132,7 @@
             </a>
           </li>
 
-          <li class="portfolio-list-item">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-06.jpg" alt="Smiling girl" width="360" height="300" />
 
@@ -149,7 +143,7 @@
             </a>
           </li>
 
-          <li class="portfolio-list-item">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-07.jpg" alt="Instagram Stories Concept" width="360" height="300" />
 
@@ -160,7 +154,7 @@
             </a>
           </li>
 
-          <li class="portfolio-list-item">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-08.jpg" alt="Organic Food" width="360" height="300" />
               <div class="portfolio-content-wrap">
@@ -170,7 +164,7 @@
             </a>
           </li>
 
-          <li class="portfolio-list-item">
+          <li class="portfolio-list-item card-set-item">
             <a class="portfolio-list-link link" href="">
               <img src="./images/portfolio-09.jpg" alt="Fresh Coffee" width="360" height="300" />
               <div class="portfolio-content-wrap">
@@ -185,10 +179,10 @@
   </main>
 
   <!--? FOOTER section -->
-  <footer class="footer-wrap">
-    <div class="container footer-content-wrap">
+  <footer class="footer">
+    <div class="footer-wrap container">
       <div class="footer-logo-side">
-        <a href="./index.html" class="link logo">WEB<span class="footer-accent">STUDIO</span></a>
+        <a href="./index.html" class="logo footer-link link">WEB<span class="footer-accent">STUDIO</span></a>
         <p class="footer-text">
           Increase the flow of customers and sales for your business with digital marketing &
           growth solutions.
@@ -197,30 +191,30 @@
 
       <div class="footer-social-side">
         <p class="footer-social-text">Social media</p>
-        <ul class="footer-social-list">
-          <li class="footer-social-list-item">
+        <ul class="footer-social-list card-set">
+          <li class="footer-social-list-item card-set-item">
             <a class="footer-social-list-link" href="#">
               <svg class="footer-social-list-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-instagram" />
               </svg>
             </a>
           </li>
-          <li class="footer-social-list-item">
+          <li class="footer-social-list-item card-set-item">
             <a class="footer-social-list-link" href="#">
               <svg class="footer-social-list-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-twitter" />
               </svg>
             </a>
           </li>
-          <li class="footer-social-list-item">
+          <li class="footer-social-list-item card-set-item">
             <a class="footer-social-list-link" href="#">
               <svg class="footer-social-list-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-facebook" />
               </svg>
             </a>
           </li>
-          <li class="footer-social-list-item">
-            <a class="footer-social-list-link" href="#">
+          <li class="footer-social-list-item card-set-item">
+            <a class=" footer-social-list-link" href="#">
               <svg class="footer-social-list-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-linkedin" />
               </svg>
