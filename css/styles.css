@@ -12,6 +12,7 @@
 
   --text-dark-color: #2e2f42; /* NAVY BLUE */
   --text-white-color: #fff; /* WHITE */
+  --text-black-color: #000;
   --text-light-color: #f4f4fd; /* CLOUD */
 
   --text-active-color: #404bbf; /* OCEAN */
@@ -32,12 +33,14 @@
   --bg-accent-color: #e7e9fc; /* CORNFLOWER */
   --bg-light-color: #f4f4fd; /* CLOUD */
 
-  --bg-modal-color: rgba(46, 47, 66, 0.4); /* NAVY BLUE MODAL*/
-  --bg-hero-secondary: rgba(46, 47, 66, 0.7); /* GREY */
+  --bg-modal-color: #fcfcfc;
+  --bg-backdrop-color: rgba(46, 47, 66, 0.4); /* NAVY BLUE MODAL*/
+  --bg-hero-color: rgba(46, 47, 66, 0.7); /* GREY */
 
   /* OTHER */
   --indent: 24px;
   --items: 4;
+  --transition-dur-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -210,6 +213,7 @@ button {
 }
 
 .header-nav-link {
+  position: relative;
   display: block;
   padding-top: 24px;
   padding-bottom: 23px;
@@ -219,8 +223,26 @@ button {
   color: var(--text-dark-color);
 }
 
+.header-nav-link::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+
+  height: 4px;
+  background-color: var(--bg-pressed-color);
+  border-radius: 2px;
+  opacity: 0;
+}
+
 .header-nav-link.active {
   color: var(--text-active-color);
+}
+
+.active.header-nav-link::after {
+  opacity: 1;
 }
 
 .header-contacts {
@@ -254,7 +276,7 @@ button {
   max-width: 1440px;
   height: 600px;
   background-color: var(--bg-dark-color);
-  background-image: linear-gradient(var(--bg-hero-secondary), var(--bg-hero-secondary)),
+  background-image: linear-gradient(var(--bg-hero-color), var(--bg-hero-color)),
     url('../images/hero_bg_img.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -470,10 +492,37 @@ button {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transform: translate(0, 100%);
+  transition: transform var(--transition-dur-func);
+
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-light-color);
+  background-color: var(--bg-brand-color);
+
+  padding: 40px 32px;
+}
+
 .portfolio-list-link:hover,
 .portfolio-list-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-list-link:hover .portfolio-overlay,
+.portfolio-list-link:focus .portfolio-overlay {
+  transform: translate(0, 0);
 }
 
 .portfolio-content-wrap {
@@ -486,4 +535,72 @@ button {
 
 .portfolio-list-link:hover .portfolio-content-wrap {
   border-radius: 0.5px;
+}
+
+/*? ---------------------- */
+/*? MODAL window           */
+/*? ---------------------- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-backdrop-color);
+
+  transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 408px;
+  height: 576px;
+  background-color: var(--bg-modal-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.btn-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--bg-accent-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: background-color var(--transition-dur-func);
+}
+
+.btn-modal-close-icon {
+  fill: var(--text-black-color);
+  transition: fill var(--transition-dur-func);
+}
+
+.btn-modal-close:hover,
+.btn-modal-close:focus {
+  background-color: var(--bg-pressed-color);
+  border: none;
+}
+
+.btn-modal-close:hover .btn-modal-close-icon,
+.btn-modal-close:focus .btn-modal-close-icon {
+  fill: var(--text-white-color);
 }
