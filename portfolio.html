@@ -60,7 +60,7 @@
     </header>
 
     <main>
-      <section class="section">
+      <section class="portfolio-wrap section">
         <div class="container">
           <h1 class="title visually-hidden">Portfolio</h1>
 
@@ -281,7 +281,7 @@
     <!--? FOOTER section -->
     <footer class="footer">
       <div class="footer-wrap container">
-        <div class="footer-logo-side">
+        <div class="footer-logo-wrap">
           <a href="./index.html" class="footer-link logo link"
             >WEB<span class="footer-accent">STUDIO</span></a
           >
@@ -291,7 +291,7 @@
           </p>
         </div>
 
-        <div class="footer-social-side">
+        <div class="footer-social-wrap">
           <p class="footer-social-text">Social media</p>
           <ul class="footer-social-list card-set">
             <li class="footer-social-list-item card-set-item">
@@ -323,6 +323,27 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="footer-subscribe-wrap">
+          <p class="footer-subscribe-text">Subscribe</p>
+          <form class="subscribe-form">
+            <label>
+              <input
+                type="email"
+                name="subscribe_email"
+                class="subscribe-form-input"
+                required
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="subscribe-form-btn">
+              Subscribe
+              <svg class="subscribe-form-btn-icon" width="24" height="20">
+                <use href="./images/icons.svg#icon-send" />
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>

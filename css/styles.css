@@ -10,6 +10,8 @@
   --text-color: #434455; /* SLATE */
   --text-subtle-color: #8e8f99; /* LIGHT SLATE */
 
+  --text-placeholder-color: rgba(117, 117, 117, 0.5);
+
   --text-dark-color: #2e2f42; /* NAVY BLUE */
   --text-white-color: #fff; /* WHITE */
   --text-black-color: #000;
@@ -36,6 +38,12 @@
   --bg-modal-color: #fcfcfc;
   --bg-backdrop-color: rgba(46, 47, 66, 0.4); /* NAVY BLUE MODAL*/
   --bg-hero-color: rgba(46, 47, 66, 0.7); /* GREY */
+
+  /* BORDER COLOR */
+  --border-modal-primary-color: rgba(33, 33, 33, 0.2);
+  --border-modal-active-color: #4d5ae5;
+  --border-pressed-color: #404bbf;
+  --border-white-color: #fff;
 
   /* OTHER */
   --indent: 24px;
@@ -418,7 +426,10 @@ button {
 
 .footer-wrap {
   display: flex;
-  gap: 120px;
+}
+
+.footer-logo-wrap {
+  margin-right: 120px;
 }
 
 .footer-link {
@@ -435,6 +446,10 @@ button {
   line-height: 1.5;
   max-width: 270px;
   color: var(--text-accent-color);
+}
+
+.footer-social-wrap {
+  margin-right: 80px;
 }
 
 .footer-social-text {
@@ -470,9 +485,77 @@ button {
   fill: var(--text-light-color);
 }
 
+.footer-subscribe-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-white-color);
+}
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.subscribe-form-input {
+  color: var(--text-white-color);
+  background-color: var(--bg-dark-color);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  padding-left: 16px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 264px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  transition: border-color var(--transition-dur-func);
+}
+
+.subscribe-form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-form-input:focus {
+  outline: none;
+  border-color: var(--border-white-color);
+}
+
+.subscribe-form-btn {
+  padding: 8px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background-color: var(--bg-brand-color);
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--text-white-color);
+
+  transition: background-color var(--transition-dur-func);
+}
+
+.subscribe-form-btn:focus,
+.subscribe-form-btn:hover {
+  background-color: var(--bg-pressed-color);
+}
+
+.subscribe-form-btn-icon {
+  fill: currentColor;
+}
+
 /*? ---------------------- */
 /*? PORTFOLIO page         */
 /*? ---------------------- */
+.portfolio-wrap {
+  padding-top: 96px;
+}
+
 .portfolio-nav {
   --items: 5;
   justify-content: center;
@@ -584,8 +667,10 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 408px;
-  height: 576px;
+  padding-top: 72px;
+  padding-bottom: 17px;
+  padding-right: 24px;
+  padding-left: 24px;
   background-color: var(--bg-modal-color);
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -610,9 +695,7 @@ button {
 }
 
 .btn-modal-close-icon {
-  /* fill: var(--text-black-color); */
   fill: currentColor;
-  /* transition: fill var(--transition-dur-func); */
 }
 
 .btn-modal-close:hover,
@@ -622,7 +705,146 @@ button {
   border-color: transparent;
 }
 
-.btn-modal-close:hover .btn-modal-close-icon,
-.btn-modal-close:focus .btn-modal-close-icon {
-  /* fill: var(--text-white-color); */
+.modal-form-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-dark-color);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+}
+.modal-form-field {
+  margin-bottom: 8px;
+}
+.modal-form-input-desc {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--text-subtle-color);
+}
+
+.modal-form-thumb {
+  position: relative;
+  display: block;
+}
+
+.modal-form-input {
+  color: var(--text-dark-color);
+
+  padding-left: 38px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--border-modal-primary-color);
+  border-radius: 4px;
+
+  transition: border-color var(--transition-dur-func);
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--border-modal-active-color);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  fill: var(--text-dark-color);
+
+  transition: fill var(--transition-dur-func);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--text-brand-color);
+}
+
+.modal-form-comment {
+  color: var(--text-dark-color);
+
+  resize: none;
+  padding: 8px 16px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid var(--border-modal-primary-color);
+  border-radius: 4px;
+
+  transition: border-color var(--transition-dur-func);
+}
+
+.modal-form-comment::placeholder {
+  color: var(--text-placeholder-color);
+}
+
+.modal-form-comment:focus {
+  outline: none;
+  border-color: var(--border-modal-active-color);
+}
+
+.modal-form-check-desc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-form-check-desc::before {
+  content: '';
+  cursor: pointer;
+  display: block;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--text-dark-color);
+  border-radius: 2px;
+
+  transition: background-image var(--transition-dur-func),
+    background-color var(--transition-dur-func), border-color var(--transition-dur-func);
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before {
+  background-image: url('../images/checked.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 10px 8px;
+  background-color: var(--bg-pressed-color);
+  border-color: var(--border-pressed-color);
+}
+
+/* Fake focus */
+.modal-form-check:focus-within + .modal-form-check-desc::before {
+  /* outline: 2px solid blue; */
+}
+
+.modal-form-link {
+  color: var(--text-brand-color);
+}
+
+.modal-form-submit-btn {
+  align-self: center;
+  width: 169px;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--text-white-color);
+  background-color: var(--bg-brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color var(--transition-dur-func);
+}
+
+.modal-form-submit-btn:hover,
+.modal-form-submit-btn:focus {
+  background-color: var(--bg-pressed-color);
 }
